@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SI4505</title>
+</head>
+<body style="text-align: center;">
+    <h1>Javascrip Can Change Images</h1>
+    <img id="image" onclick="changeImage()" src="ig.webp" alt="" width="200px" height="200px">
+    <h1 id="logo"></h1>
+    <p>Click the image to change image</p>
+    <script>
+        function changeImage(){
+            var image= document.getElementById('image')
+            var logo=document.getElementById('logo')
+            if (image.src.match("line")){
+                image.src='ig.webp'
+                logo.innerHTML='Instagram'
+            }
+            else{
+                image.src='line.webp'
+                logo.innerHTML='Line'
+            }
+        }
+    </script>
+</body>
+</html>
