@@ -8,7 +8,7 @@
     <div class="container">
                   <div class="row justify-content-center">
                     <div class="col-md-6">
-                    <form action="3_add.php" method="POST">
+                    <form action="2_add.php" method="POST">
                         <h2 class="mb-4" style="text-align: center;">Tambah Data Musik</h2>
                         <div class="mb-3">
                           <label for="judul" class="form-label">Judul</label>

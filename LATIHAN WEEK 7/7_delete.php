@@ -16,7 +16,8 @@ $sql = "DELETE FROM data_lagu WHERE id = $id";
 
 
 if (mysqli_query($conn, $sql)) {
-    echo "Data deleted successfully.";
+    header("Location: 7_popup.php");
+    exit();
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
@@ -25,30 +26,3 @@ if (mysqli_query($conn, $sql)) {
 mysqli_close($conn);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-<div id="custom-alert" class="custom-alert">
-    <p>Data Anda telah dihapus.</p>
-    <button onclick="bukaHalamanLain()">Kembali</button>
-</div>
-
-<script>
-function tampilkanCustomAlert() {
-    document.getElementById("custom-alert").style.display = "block";
-}
-
-function bukaHalamanLain() {
-    window.location.href = "1.php"; 
-}
-</script>
-
-
-</body>
-</html>

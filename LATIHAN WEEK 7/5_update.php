@@ -20,7 +20,8 @@ $sql = "UPDATE data_lagu SET judul = '$judul', penyanyi = '$penyanyi', album = '
 
 
 if (mysqli_query($conn, $sql)) {
-    echo "Data updated successfully.";
+    header("Location: 5_popup.php");
+    exit();
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
@@ -29,30 +30,3 @@ if (mysqli_query($conn, $sql)) {
 mysqli_close($conn);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-<div id="custom-alert" class="custom-alert">
-    <p>Data Anda telah diupdate.</p>
-    <button onclick="bukaHalamanLain()">Kembali</button>
-</div>
-
-<script>
-function tampilkanCustomAlert() {
-    document.getElementById("custom-alert").style.display = "block";
-}
-
-function bukaHalamanLain() {
-    window.location.href = "1.php"; // Ganti dengan URL halaman yang ingin Anda tuju.
-}
-</script>
-
-
-</body>
-</html>
